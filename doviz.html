@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döviz Hesaplama Formu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="baslik">Döviz Hesaplama Formu</h1>
+    <form action="#">
+        <input type="text" id="txtPara" value="Ne kadar paranız var?(TL olarak giriniz)" onfocus="this.value=' '">
+        <select name="slctDoviz" id="slctDoviz">
+            <option value="#">Çevirilecek para birimini seçiniz</option>
+            <option value="$">USD-Dolar</option>
+            <option value="E">EU-Euro</option>
+        </select>
+        <input type="button" value="Çevir" id="btnCevir" onclick="cevir();">
+    </form>
+    <h3 id="sonuc"></h3>
+    <script src="script.js"></script>
+</body>
+</html>

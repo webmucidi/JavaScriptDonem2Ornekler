@@ -7,3 +7,15 @@ html{
 h3{
     color: red;
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#txtMesafe{
+    width: 350px;
+}

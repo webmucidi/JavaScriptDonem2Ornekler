@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dört İşlem Hesaplama Formu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="baslik">DÖRT İŞLEM HESAPLAMA</h1>
+    <form action="#">
+        <select name="islemler" id="islemler">
+            <option value="#">Seçiminizi Yapınız</option>
+            <option value="+">Toplama</option>
+            <option value="-">Çıkarma</option>
+            <option value="*">Çarpma</option>
+            <option value="/">Bölme</option>
+        </select>
+        <input type="text" id="txtSayi1">
+        <input type="text" id="txtSayi2">
+        <input type="button" value="Hesapla" id="btnHesapla" onclick="dortislem();">
+
+    </form>
+    <h3 id="sonuc"></h3>
+    <script src="script.js"></script>
+</body>
+</html>
