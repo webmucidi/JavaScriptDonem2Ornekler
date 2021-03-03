@@ -181,3 +181,37 @@ function taksimetre(){
 
     document.querySelectorAll("h3")[0].innerHTML="Gideceğiniz mesafe için ortalama ücret: "+odenecekTutar+" TL'dir";
 }
+
+function altinHesapla(){
+    
+
+    let islemTuru,altinTuru,tutar,miktar,sonuc;
+    let i;
+    const gramAltin=450,ceyrekAltin=700;
+
+    for(i=0;i<document.getElementsByName("ceviriTuru").length;i++)
+    {
+        
+        if(document.getElementsByName("ceviriTuru")[i].checked)
+        {
+            islemTuru=document.getElementsByName("ceviriTuru")[i].value;
+        }
+
+    }
+
+    console.log(islemTuru);
+
+    let listeAltinTuru=document.getElementById("slctAltinTuru");
+
+    for(i=0;i<listeAltinTuru.length;i++)
+    {
+        if(listeAltinTuru[i].selected)
+        {
+            altinTuru=listeAltinTuru[i].value;
+        }
+    }
+
+    console.log(altinTuru);
+
+
+}

@@ -19,3 +19,14 @@ body{
 #txtMesafe{
     width: 350px;
 }
+
+form > div{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.aciklama{
+    flex: 0 0 200px;
+    color: red;
+    font-weight: bold;
+}

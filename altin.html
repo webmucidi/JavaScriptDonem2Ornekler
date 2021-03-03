@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altın Hesaplama Formu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="baslik">ALTIN HESAPLAMA FORMU</h1>
+    <form action="#" id="altinHesaplama">
+        <div id="grup1">
+            <span class="aciklama">İşlem türü:</span>
+            <input type="radio" name="ceviriTuru" id="radioToAltin" value="paradanAltina" checked>
+            <label for="radioToAltin">Paradan Altına Çevir</label>
+            <input type="radio" name="ceviriTuru" id="radioToPara" value="altindanParaya">
+            <label for="radioToPara">Altından Paraya Çevir</label>
+        </div>
+        <div id="grup2">
+        <span class="aciklama">Altın türü:</span>
+            <select name="" id="slctAltinTuru">
+                <option value="gram">Gram Altın</option>
+                <option value="ceyrek">Çeyrek Altın</option>
+                <option value="yarim">Yarım Altın</option>
+                <option value="tam">Tam Altın</option>
+            </select>
+        </div>
+        <div id="grup3">
+            <span class="aciklama">Miktar/Tutar:</span>
+            <input type="text" id="txtMiktarTutar">
+            <input type="button" id="btnCevir" value="Çevir" onclick="altinHesapla();">
+        </div>
+    </form>
+    <h3 id="sonuc"></h3>
+
+    <script src="script.js"></script>
+</body>
+</html>
