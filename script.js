@@ -184,9 +184,10 @@ function taksimetre(){
 
 function altinHesapla(){
     
+    
 
     let islemTuru,altinTuru,tutar,miktar,sonuc;
-    let i;
+    var i;
     const gramAltin=450,ceyrekAltin=700;
 
     for(i=0;i<document.getElementsByName("ceviriTuru").length;i++)
@@ -213,5 +214,92 @@ function altinHesapla(){
 
     console.log(altinTuru);
 
+
+}
+
+function altinDonustur(){
+
+    //1.adım --> değişkenleri ve varsa sabitleri tanımlıyoruz.
+    let islemCinsi,altinCinsi,paraMiktari,altinMiktari,sonucTutari;
+    var i;
+    const altinGram=450,altinCeyrek=700;
+
+    
+    let elemanSayisi=document.getElementsByName("ceviriTuru").length;
+    console.log(elemanSayisi);
+    
+
+    //2.adım --> değişkenlere değer aktarıyoruz.(1.listeden seçimi alma)
+    for(i=0;i<elemanSayisi;i++)
+    {
+        if(document.getElementsByName("ceviriTuru")[i].checked)
+        {
+            islemCinsi=document.getElementsByName("ceviriTuru")[i].value;
+        }
+
+        //console.log(i);
+    }
+
+    console.log(islemCinsi);
+
+
+    //2.adım --> değişkenlere değer aktarıyoruz.(2.listeden seçimi alma)
+    let listeAltin=document.getElementById("slctAltinTuru");
+
+    for(i=0;i<listeAltin.length;i++)
+    {
+        if(listeAltin.options[i].selected)
+        {
+            altinCinsi=listeAltin.options[i].value;
+        }    
+    }
+
+    console.log(altinCinsi);
+
+    if(islemCinsi=="altindanParaya")
+    {
+        altinMiktari=Number(document.getElementById("txtMiktarTutar").value);
+
+        if(altinCinsi=="gram")
+        {
+            sonucTutari=altinMiktari*altinGram;
+        }
+        else if(altinCinsi=="ceyrek")
+        {
+            sonucTutari=altinMiktari*altinCeyrek;
+        }
+        else if(altinCinsi=="yarim")
+        {
+            sonucTutari=altinMiktari*altinCeyrek*2;
+        }
+        else if(altinCinsi=="yarim")
+        {
+            sonucTutari=altinMiktari*altinCeyrek*4;
+        }
+    }
+
+    else if(islemCinsi=="paradanAltina")
+    {
+        paraMiktari=Number(document.getElementById("txtMiktarTutar").value);
+
+        if(altinCinsi=="gram")
+        {
+            sonucTutari=paraMiktari/altinGram;
+        }
+        else if(altinCinsi=="ceyrek")
+        {
+            sonucTutari=paraMiktari/altinCeyrek;
+        }
+        else if(altinCinsi=="yarim")
+        {
+            sonucTutari=paraMiktari/(altinCeyrek*2);
+        }
+        else if(altinCinsi=="yarim")
+        {
+            sonucTutari=paraMiktari/(altinCeyrek*4);
+        }
+    }
+
+    document.getElementById("sonuc").innerHTML="Bulunan sonuç: " + sonucTutari.toFixed(2);
 
 }
