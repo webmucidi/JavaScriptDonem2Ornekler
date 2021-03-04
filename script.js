@@ -306,6 +306,23 @@ function altinDonustur(){
 
 }
 
-function tekCiftBul(){
+function listeyeEkle(){
+    let sayi;
+    sayi=Number(document.getElementById("txtSayi").value);
+
+    //Varolmayan bir HTML nesnesi oluşturma ve içerisine değer aktarma
+    let secenek=document.createElement("option");
+    secenek.value=sayi;
+    secenek.innerHTML=sayi;
+    console.log(secenek);
+
+    //Oluşturulan HTML nesnesini çocuk olarak başka bir nesne altına katma
+    let liste=document.getElementById("sayilar");
+    liste.appendChild(secenek);
+    console.log(liste);
+
+    //Varolan bir stili değiştirme veya ekleme
+    liste.style.width="200px";
     
+
 }
