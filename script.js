@@ -300,6 +300,12 @@ function altinDonustur(){
         }
     }
 
+    //Son Adım --> Sonucu yazdırma
     document.getElementById("sonuc").innerHTML="Bulunan sonuç: " + sonucTutari.toFixed(2);
+    
 
+}
+
+function tekCiftBul(){
+    
 }
