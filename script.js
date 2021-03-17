@@ -1,3 +1,5 @@
+let i;
+
 function renkDegistir(){
    document.getElementById("baslik").style.color="blue"; 
    document.getElementById("baslik").innerHTML="Nasıl değişti ama :)"; 
@@ -306,7 +308,12 @@ function altinDonustur(){
 
 }
 
+let liste=document.getElementById("sayilar");
+
 function listeyeEkle(){
+
+    console.log(liste);
+
     let sayi;
     sayi=Number(document.getElementById("txtSayi").value);
 
@@ -317,12 +324,72 @@ function listeyeEkle(){
     console.log(secenek);
 
     //Oluşturulan HTML nesnesini çocuk olarak başka bir nesne altına katma
-    let liste=document.getElementById("sayilar");
+    
     liste.appendChild(secenek);
     console.log(liste);
 
     //Varolan bir stili değiştirme veya ekleme
-    liste.style.width="200px";
+    liste.style.width="100px";
     
+}
+
+function tekCiftSay(){
+    
+    let secim;
+    let tekSayisi=0,ciftSayisi=0;
+
+    for(i=0;i<liste.length;i++)
+    {
+        if((liste.options[i].value)%2==0)
+        {
+            ciftSayisi++;
+            //console.log(ciftSayisi);
+        }
+        else if((liste.options[i].value)%2==1)
+        {
+            tekSayisi++;
+            //console.log(tekSayisi);
+        }
+    }
+
+    document.getElementById("sonuc").innerHTML="Tek sayısı: "+tekSayisi+" Çift sayısı: "+ciftSayisi;
+
+}
+
+let listeOgrenciler=document.getElementById("ogrenciler");
+
+let listeCinsiyet=document.getElementsByName("cinsiyet");
+
+
+function ogrenciEkle(){
+
+    console.log(listeOgrenciler);
+
+    let ogrenciAdSoyad=document.querySelectorAll("input")[0].value;
+    let secimCinsiyet;
+
+    console.log(ogrenciAdSoyad);
+
+    for(i=0;i<listeCinsiyet.length;i++)
+    {
+        if(listeCinsiyet[i].checked)
+        {
+            secimCinsiyet=listeCinsiyet[i].value;
+        }
+    }
+    console.log(secimCinsiyet);
+
+    let eleman=document.createElement("option");
+    eleman.innerHTML=ogrenciAdSoyad;
+    eleman.value=secimCinsiyet;
+    console.log(eleman);
+
+    listeOgrenciler.appendChild(eleman);
+    
+
+
+}
+
+function cinsiyetSay(){
 
 }

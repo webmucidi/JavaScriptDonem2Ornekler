@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Öğrenci Bilgi Formu</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='script.js'></script>
+</head>
+<body>
+    <h1 id="baslik">ÖĞRENCİ BİLGİ FORMU</h1>
+    <form action="" id="ogrenci">
+        <input type="text" id="txtOgrenciAdSoyad">
+        <label for="secenekKiz">Kız</label>
+        <input type="radio" name="cinsiyet" id="secenekKiz" value="K">
+        <label for="secenekErkek">Erkek</label>
+        <input type="radio" name="cinsiyet" id="secenekErkek" value="E">
+        <input type="button" value="Öğrenciyi Ekle" onclick="ogrenciEkle();">
+        <select name="" id="ogrenciler" size="5"></select>
+        <input type="button" value="Erkek/Kız Sayısını Bul" onclick="cinsiyetSay();">
+    </form>
+</body>
+</html>
