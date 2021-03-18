@@ -391,5 +391,19 @@ function ogrenciEkle(){
 }
 
 function cinsiyetSay(){
+    let erkekSayisi=0,kizSayisi=0;
 
+    for(i=0;i<listeOgrenciler.length;i++)
+    {
+        if(listeOgrenciler.options[i].value=="E")
+        {
+            erkekSayisi=erkekSayisi+1;
+        }
+        else if(listeOgrenciler.options[i].value=="K")
+        {
+            kizSayisi++;
+        }
+    }
+
+    alert("Erkek sayısı:"+erkekSayisi+" Kız sayısı:"+kizSayisi);
 }
